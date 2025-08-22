@@ -61,7 +61,7 @@ serviteca/
 
 ### 1. Clonar el Repositorio
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/brayooo/Serviteca
 cd serviteca
 ```
 
@@ -94,3 +94,11 @@ streamlit run ui/streamlit_app.py
 - **URL del Frontend**: http://localhost:8501
 
 ---
+
+## 🗑️ Administración de Base de Datos
+Limpiar Base de Datos
+Si necesitas borrar toda la información de la base de datos:
+```bash
+python -c "from app.admin import purge_db_with_sql; purge_db_with_sql()"
+```
+- Este comando eliminará **TODOS** los datos de la base de datos de forma permanente.
