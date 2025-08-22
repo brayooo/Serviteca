@@ -91,6 +91,15 @@ uvicorn app.api:app --reload --port 8001
 ```bash
 streamlit run ui/streamlit_app.py
 ```
+**Nota:** Al ejecutar por primera vez, Streamlit mostrará un mensaje de bienvenida:
+```
+👋 Welcome to Streamlit!
+      If you'd like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,
+      leave this field blank.
+      Email:
+```
+Simplemente deja el campo en blanco y presiona **Enter** para continuar.
 - **URL del Frontend**: http://localhost:8501
 
 ---
