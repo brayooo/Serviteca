@@ -1,5 +1,5 @@
 import os
-from sqlmodel import SQLModel, create_engine, Session
+from sqlmodel import SQLModel, create_engine, Session, text
 from sqlalchemy.pool import QueuePool
 from typing import Generator
 from dotenv import load_dotenv
@@ -58,7 +58,7 @@ def test_connection() -> bool:
     """Prueba la conexión y muestra información de la BD"""
     try:
         with Session(engine) as session:
-            result = session.exec("SELECT version()").first()
+            result = session.exec(text("SELECT version()")).first()
             print(f"✅ PostgreSQL conectado: {result[:60]}...")
             return True
     except Exception as e:
