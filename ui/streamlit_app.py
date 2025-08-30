@@ -2,8 +2,11 @@ import os
 import requests
 import streamlit as st
 import pandas as pd
+from dotenv import load_dotenv
 
-API_BASE = os.environ.get("API_BASE", "http://127.0.0.1:8001")
+load_dotenv()
+
+API_BASE = os.environ.get("API_BASE", "http://127.0.0.1:8000")
 API_TIMEOUT = float(os.environ.get("API_TIMEOUT", "30"))
 
 st.set_page_config(page_title="Serviteca", page_icon="🟢", layout="wide")
